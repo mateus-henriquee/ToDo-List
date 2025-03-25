@@ -16,12 +16,25 @@ section {
     justify-content: center;
 }
 
-input, button {
+#novatarefa, 
+#adicionar {
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
     border: none;
     font-size: 16px;
+}
+
+#listaTarefas button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+#listaTarefas input {
+    width: 100%;
 }
 
 .input-foto {
