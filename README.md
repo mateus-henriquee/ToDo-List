@@ -26,7 +26,7 @@ Um projeto de Lista de Tarefas interativa com animações, cards responsivos, po
 
 2. Acesse o diretório do projeto:
    ```bash
-   cd todo-list-animada
+   cd ToDo-List
    ```
 
 3. Abra o arquivo `index.html` no seu navegador.
