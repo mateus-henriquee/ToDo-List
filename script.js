@@ -8,6 +8,17 @@ document.getElementById('adicionar').addEventListener("click", function () {
     let card = document.createElement("div");
     card.classList.add("tarefa-card");
 
+    let editarIcone = document.createElement("span");
+    editarIcone.innerHTML = "✏️";
+    editarIcone.classList.add("editar-icone");
+    editarIcone.style.position = "absolute";
+    editarIcone.style.fontSize = "16px"
+    editarIcone.style.top = "5px";
+    editarIcone.style.right = "5px";
+    editarIcone.style.cursor = "pointer";
+    editarIcone.style.display = "none";
+    card.appendChild(editarIcone);
+
     let imgContainer = document.createElement("div");
     imgContainer.classList.add("img-container");
     card.appendChild(imgContainer);
@@ -33,6 +44,8 @@ document.getElementById('adicionar').addEventListener("click", function () {
 
     let texto = document.createElement("p");
     texto.textContent = tarefaTexto;
+    texto.classList.add("tarefa-texto");
+    texto.contentEditable = "false";
     card.appendChild(texto);
 
     let btnConcluir = document.createElement("button");
@@ -53,9 +66,29 @@ document.getElementById('adicionar').addEventListener("click", function () {
         setTimeout(() => card.remove(), 500);
     });
 
+    editarIcone.addEventListener("click", function () {
+        texto.contentEditable = "true";
+        texto.focus();
+    });
+
+    texto.addEventListener("blur", function () {
+        texto.contentEditable = "false";
+        if (texto.textContent.trim() === "") {
+            texto.textContent = tarefaTexto;
+        }
+    });
+
     card.appendChild(btnConcluir);
     card.appendChild(btnRemover);
     lista.appendChild(card);
 
     inputTarefa.value = "";
+
+    card.style.position = "relative";
+    card.addEventListener("mouseenter", function () {
+        editarIcone.style.display = "block";
+    });
+    card.addEventListener("mouseleave", function () {
+        editarIcone.style.display = "none";
+    });
 });
