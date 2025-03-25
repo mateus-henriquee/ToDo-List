@@ -1,6 +1,6 @@
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #501184;
+    background-color: #141414;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +10,7 @@ body {
 
 section {
     color: #fff;
+    font-size: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,14 +45,14 @@ section {
 }
 
 button {
-    background-color: #28a745;
+    background-color: #5228a7;
     color: white;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #5228a7a5;
 }
 
 .tarefas-container {
@@ -64,6 +65,7 @@ button:hover {
 .tarefa-card {
     background: white;
     color: black;
+    font-size: 18px;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -96,6 +98,14 @@ button:hover {
 .concluir {
     text-decoration: line-through;
     color: green;
+}
+
+.concluir-btn {
+    background-color: green;
+}
+
+.concluir-btn:hover {
+    background-color: rgba(0, 128, 0, 0.762);
 }
 
 .remover-animacao {
