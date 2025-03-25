@@ -49,8 +49,7 @@ document.getElementById('adicionar').addEventListener("click", function () {
     btnRemover.textContent = "Remover";
     btnRemover.classList.add("remover");
     btnRemover.addEventListener('click', function () {
-        card.style.opacity = "0";
-        card.style.transform = "translateY(20px)";
+        card.classList.add("remover-animacao");
         setTimeout(() => card.remove(), 500);
     });
 

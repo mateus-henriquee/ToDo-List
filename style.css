@@ -97,3 +97,48 @@ button:hover {
     text-decoration: line-through;
     color: green;
 }
+
+.remover-animacao {
+    animation: slideOut 0.5s forwards;
+}
+
+.card-image {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.concluido-img {
+    filter: hue-rotate(90deg) saturate(10%) brightness(85%);
+}
+
+.img-container:hover .card-image {
+    filter: brightness(0.7);
+}
+
+.img-container:hover .troca-texto {
+    display: block;
+}
+
+.troca-texto {
+    display: none;
+    color: white;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
